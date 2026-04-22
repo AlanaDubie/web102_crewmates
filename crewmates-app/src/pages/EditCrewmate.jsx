@@ -66,7 +66,7 @@ export default function EditCrewmate() {
         <p>Pick a color:</p>
         {COLORS.map(c => (
           <button type="button" key={c} onClick={() => setColor(c)}
-            style={{ background: color === c ? 'lightblue' : 'white', margin: '4px' }}>
+            className={color === c ? 'selected' : ''}>
             {c}
           </button>
         ))}
@@ -74,7 +74,7 @@ export default function EditCrewmate() {
         <p>Pick a speed:</p>
         {SPEEDS.map(s => (
           <button type="button" key={s} onClick={() => setSpeed(s)}
-            style={{ background: speed === s ? 'lightblue' : 'white', margin: '4px' }}>
+            className={speed === s ? 'selected' : ''}>
             {s}
           </button>
         ))}
@@ -82,7 +82,7 @@ export default function EditCrewmate() {
         <p>Pick a role:</p>
         {ROLES.map(r => (
           <button type="button" key={r} onClick={() => setRole(r)}
-            style={{ background: role === r ? 'lightblue' : 'white', margin: '4px' }}>
+            className={role === r ? 'selected' : ''}>
             {r}
           </button>
         ))}
